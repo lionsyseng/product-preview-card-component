@@ -39,7 +39,7 @@ body {
   background: var(--white);
   border-radius: 12px;
   overflow: hidden;
-  max-width: 600px;
+  max-width: 37.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -117,6 +117,11 @@ body {
   gap: 10px;
 }
 
+.card__button img {
+  width: 20px;
+  height: 20px;
+}
+
 /* Estilo del pie de página */
 .attribution {
     font-size: 0.6875rem;
@@ -138,7 +143,7 @@ body {
 }
 
 /* Estilos para Desktop */
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .card {
     flex-direction: row;
   }
