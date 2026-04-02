@@ -1,0 +1,154 @@
+
+/* Importación de fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&');
+
+/* Declaración de Colores */
+:root {
+  --green-500: hsl(158, 36%, 37%);
+  --green-700: hsl(158, 42%, 18%);
+  --black: hsl(212, 21%, 14%);
+  --grey: hsl(228, 12%, 48%);
+  --cream: hsl(30, 38%, 92%);
+  --white: hsl(0, 0%, 100%);
+}
+
+/* Estilo globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo del cuerpo de la pa´gina */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--cream);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Estilo para el Container */
+.container {
+  padding: 1rem;
+}
+
+/* Card */
+.card {
+  background: var(--white);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilo para Image */
+.card__image img {
+  width: 100%;
+  display: block;
+}
+
+/*  Estilos para el Content del producto */
+.card__content {
+  padding: 1.5rem;
+}
+
+/* Estilo de la categoría del producto */
+.card__category {
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  color: var(--grey);
+  margin-bottom: 1rem;
+}
+
+/* Estilo del nombre del producto */
+.card__title {
+  font-family: 'Fraunces', serif;
+  font-size: 1.8rem;
+  color: var(--black);
+  margin-bottom: 1rem;
+}
+
+/* Estilo de la descripción del producto */
+.card__description {
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Prices */
+.card__prices {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.price--new {
+  font-family: 'Fraunces', serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--green-500);
+}
+
+.price--old {
+  text-decoration: line-through;
+  color: var(--grey);
+}
+
+/* Button */
+.card__button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--green-500);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Estilo del pie de página */
+.attribution {
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Hover + Focus */
+.card__button:hover {
+  background: var(--green-700);
+}
+
+.card__button:focus {
+  outline: 3px solid var(--green-700);
+  outline-offset: 2px;
+}
+
+/* Estilos para Desktop */
+@media (min-width: 768px) {
+  .card {
+    flex-direction: row;
+  }
+
+  .card__image,
+  .card__content {
+    flex: 1;
+  }
+
+  .card__content {
+    padding: 2rem;
+  }
+}
